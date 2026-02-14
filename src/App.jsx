@@ -1,30 +1,25 @@
 import { useEffect, useRef } from 'react'
 
-// Unsplash images for construction aesthetic
-const HERO_IMG = 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=2000&q=80'
+const HERO_IMG = '/images/hero.jpeg'
 
 const GALLERY_IMAGES = [
-  { src: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=800&q=80', alt: 'Modern glass building' },
-  { src: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80', alt: 'Architectural structure' },
-  { src: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80', alt: 'Construction crane at sunset' },
-  { src: 'https://images.unsplash.com/photo-1590274853856-f22d5ee3d228?auto=format&fit=crop&w=800&q=80', alt: 'Luxury residence' },
-  { src: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&w=800&q=80', alt: 'Modern interior' },
+  { src: '/images/gallery6.jpg', alt: 'Completed project' },
+  { src: '/images/gallery5.jpg', alt: 'Completed project' },
+  { src: '/images/gallery4.jpg', alt: 'Completed project' },
+  { src: '/images/gallery3.jpg', alt: 'Completed project' },
+  { src: '/images/gallery2.jpg', alt: 'Completed project' },
+  { src: '/images/gallery.jpg', alt: 'Completed project' },
 ]
 
 const SERVICES = [
   {
     title: 'Residential Construction',
-    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80',
+    image: '/images/shep4.jpg',
     description: 'From custom luxury homes to multi-family developments, we bring visionary residential designs to life with uncompromising quality and craftsmanship.',
   },
   {
-    title: 'Commercial Development',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80',
-    description: 'We deliver state-of-the-art commercial spaces — offices, retail centers, and mixed-use developments — engineered for performance and built to impress.',
-  },
-  {
     title: 'Renovation & Remodeling',
-    image: 'https://images.unsplash.com/photo-1574359411659-15573a27fd0c?auto=format&fit=crop&w=800&q=80',
+    image: '/images/shep7.jpg',
     description: 'Breathing new life into existing structures, our renovation team transforms outdated spaces into modern masterpieces while preserving their character.',
   },
 ]
@@ -179,7 +174,7 @@ function Services() {
           <div className="w-12 h-px bg-gold mx-auto mt-6" />
         </FadeIn>
 
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {SERVICES.map((service, i) => (
             <FadeIn key={i} delay={i * 150}>
               <div className="group bg-slate-950/50 border border-white/5 hover:border-gold/30 transition-all duration-500 overflow-hidden">
